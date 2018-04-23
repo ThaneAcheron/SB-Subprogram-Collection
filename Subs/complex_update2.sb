@@ -1,0 +1,251 @@
+                              start:                              
+                   TextWindow.Title = (" Command Prompt ")         
+                   TextWindow.WriteLine ("Type help for menu")
+                   answer = TextWindow.Read ()
+
+
+lineQ: 
+If answer = "help" Then 
+  
+         TextWindow.Title = ("help menu") 
+         TextWindow.writeline ("Available Commands:") 
+         TextWindow.WriteLine ("") 
+         TextWindow.WriteLine ("turtle -     interact with turtle graphics") 
+         TextWindow.WriteLine ("times  -     X x X ")
+         TextWindow.WriteLine ("Plus   -     X + X ") 
+         TextWindow.writeline ("Minus  -     X - X ") 
+         TextWindow.writeline ("Clear  -     clears window")
+         TextWindow.WriteLine ("Time   -     shows current time/date")
+         TextWindow.WriteLine ("gradec -     grade calculator")   
+         TextWindow.WriteLine ("") 
+         TextWindow.WriteLine ("type return to return to command prompt")
+     
+                          menuanswer = TextWindow.Read () 
+                          If  menuanswer = "return" Then 
+                          goto start 
+                          Else   
+                          goto lineQ
+                          EndIf 
+       
+
+ElseIf answer = "plus" then 
+  
+                    TextWindow.Title = ("plus") 
+                    TextWindow.WriteLine ("how many sums do you want calculated?") 
+                                                      repeatp = TextWindow.Read () 
+                                                              For a = 1 to repeatp
+  
+              TextWindow.WriteLine ("please enter the first number") 
+answer1 = TextWindow.Read () 
+              textwindow.WriteLine ("please enter the second number")
+answer2 = TextWindow.Read () 
+answer3 = answer1 + answer2
+                                     TextWindow.Write (answer1) 
+                                     TextWindow.Write (" + ") 
+                                     textwindow.write (answer2) 
+                                     TextWindow.Write (" = ") 
+                                     TextWindow.Writeline (answer3) 
+                                                                            endfor 
+                                  Goto start 
+  
+  
+  
+Elseif answer = "minus" then 
+  
+                     TextWindow.Title = ("minus") 
+                     TextWindow.WriteLine ("how many sums do you want calculated?") 
+                                                       repeatm = TextWindow.Read () 
+                                                               For a = 1 to repeatm
+  
+                  TextWindow.WriteLine ("please enter the first number") 
+minanswer = textwindow.read () 
+                  TextWindow.WriteLine ("please enter the second number") 
+min2answer = TextWindow.Read() 
+  
+minanswer3 = minanswer - min2answer
+  
+                                       TextWindow.Write (minanswer) 
+                                       TextWindow.Write (" + ")
+                                       textwindow.write (min2answer)  
+                                       TextWindow.Write (" = ") 
+                                       TextWindow.WriteLine (minanswer3)
+                                                                             endfor 
+                                   Goto start 
+  
+
+elseif answer = "clear" then 
+                                   TextWindow.Clear()    
+                                     Goto start
+                                          
+                                          
+elseif answer = "time" then  
+ lineT:
+ 
+                              TextWindow.title = ("current time")
+                              TextWindow.WriteLine ("") 
+                              textwindow.write (Clock.Hour) 
+                              TextWindow.Write (":") 
+                              TextWindow.Write (Clock.Minute) 
+                              textwindow.writeline ("") 
+                              TextWindow.WriteLine ("") 
+                TextWindow.WriteLine ("type date for current date") 
+                TextWindow.WriteLine ("type return to go to command prompt") 
+                              date1 = TextWindow.Read () 
+                
+                                                            If date1 = "date" then 
+                              TextWindow.Write (Clock.Year)
+                              TextWindow.write ("/") 
+                              TextWindow.Write (Clock.Month)
+                              TextWindow.Write ("/") 
+                              TextWindow.Write (Clock.Day) 
+                              TextWindow.WriteLine ("") 
+                              TextWindow.Pause()
+                                   Goto start 
+                                                      Elseif date1 = "return" then 
+                                   Goto start 
+                                                                              Else
+                                   Goto lineT   
+                                
+EndIf                                  
+                                   Goto start 
+                                 
+elseif  answer = "gradec" then 
+lineG:  
+             TextWindow.Title = ("Grade calculator") 
+             textwindow.writeline ("")
+             TextWindow.writeline ("what setting do you perfer?")  
+             TextWindow.WriteLine ("") 
+             TextWindow.WriteLine ("comand        function") 
+             TextWindow.WriteLine ("") 
+             TextWindow.WriteLine ("def  -        default setting")  
+             textwindow.writeline ("cus  -        custom setting ")        
+             TextWindow.WriteLine ("") 
+                    cg1 = TextWindow.Read () 
+                        
+                      
+                       
+                      
+lineC:                   
+                 
+        TextWindow.Clear()        
+                          If cg1 = "def"  then 
+        TextWindow.WriteLine ("how many grades do you want calculated?") 
+ cad = TextWindow.Read () 
+                                                                   For a = 1 to cad 
+         TextWindow.writeline ("please enter a grade") 
+ cad3 = TextWindow.Read ()      
+                            if cad3     >75  then
+         TextWindow.WriteLine ("A")
+                           Elseif cad3  >60  then 
+         TextWindow.WriteLine ("B")
+                           elseif cad3  >45  then 
+         textwindow.writeline  ("C") 
+                           Elseif cad3  <45  then 
+         TextWindow.WriteLine ("D")   
+                           EndIf 
+                                                                             endfor 
+         
+    
+                           elseif cg1 = "cus" then
+    
+    
+                       TextWindow.writeline ("please enter the value of an A")
+        aoo = TextWindow.Read ()  
+                       TextWindow.WriteLine ("please enter the value of a B") 
+        boo = TextWindow.Read () 
+                       TextWindow.WriteLine ("please enter the value of a C") 
+        coo = TextWindow.Read () 
+                       
+                       
+                       
+            TextWindow.WriteLine ("how many grades do you want calculated?") 
+ cad2 = TextWindow.Read () 
+                                                                   For a = 1 to cad2 
+            TextWindow.writeline ("please enter a grade") 
+ cad00 = TextWindow.Read ()      
+                              if cad00      >aoo then
+            TextWindow.WriteLine ("A")
+                              Elseif cad00  >boo then 
+            TextWindow.WriteLine ("B")
+                              elseif cad00  >coo then 
+            textwindow.writeline  ("C") 
+                              Elseif cad00  <45 then 
+            TextWindow.WriteLine ("D")   
+                              EndIf 
+                              endfor 
+                              Else 
+                              goto lineG 
+                              EndIf 
+                            
+                                             
+          
+        ElseIf answer = "times" then 
+          
+          TextWindow.Title = ("times") 
+                     TextWindow.WriteLine ("how many sums do you want calculated?") 
+                                                       repeatt = TextWindow.Read () 
+                                                               For a = 1 to repeatt
+  
+                  TextWindow.WriteLine ("please enter the first number") 
+timanswer = textwindow.read () 
+                  TextWindow.WriteLine ("please enter the second number") 
+tim2answer = TextWindow.Read() 
+  
+timanswer3 = timanswer * tim2answer
+  
+                                       TextWindow.Write (timanswer) 
+                                       TextWindow.Write (" x ")
+                                       textwindow.write (tim2answer)  
+                                       TextWindow.Write (" = ") 
+                                       TextWindow.WriteLine (timanswer3)
+                                                                             endfor 
+                                   Goto start 
+          
+                              
+
+elseif answer = "turtle" then 
+
+
+                                            Turtle.Show() 
+   butu = Controls.AddButton ("Up", 300 , 350)  
+   butd = Controls.AddButton ("Down" , 290, 390) 
+   butl = Controls.AddButton ("Left" , 200 , 380) 
+   butr = Controls.AddButton ("Right" , 380 , 380)
+   bute = Controls.AddButton ("Exit" , 1 , 1 )
+
+                           Controls.ButtonClicked = onButtonClick
+                                              endif  
+                                      Sub onButtonClick
+                        If Controls.LastClickedButton = butu Then
+         Turtle.Angle = (0)
+         Turtle.Move  (10)  
+                        ElseIf Controls.LastClickedButton = butd Then
+  
+         Turtle.angle = (180)
+         Turtle.Move  (10)
+   
+                        elseif Controls.LastClickedButton = butl then
+   
+         Turtle.angle = (270)
+         Turtle.Move  (10)
+                        elseif Controls.LastClickedButton = butr then
+   
+         Turtle.Angle = (90)
+         Turtle.Move (10)  
+   
+                        elseif Controls.LastClickedButton = bute then
+                                  GraphicsWindow.Hide()
+   
+                                          endif    
+                                          endsub
+ 
+                                  Goto start 
+                                                                         
+    
+ 
+
+
+ 
+
+Goto start
+

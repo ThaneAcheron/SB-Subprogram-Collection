@@ -1,0 +1,7 @@
+TextWindow.CursorTop =15
+TextWindow.CursorLeft =21
+TextWindow.WriteLine ("small basic programing") 
+TextWindow.CursorTop =10 
+TextWindow.CursorLeft =20  
+TextWindow.ForegroundColor = "yellow" 
+TextWindow.WriteLine ("wellcome to basic programing") 
